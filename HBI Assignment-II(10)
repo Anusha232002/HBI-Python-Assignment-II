@@ -1,0 +1,17 @@
+def calculate_gcd(x, y):
+    while y:
+        x, y = y, x % y
+    return x
+
+
+def calculate_lcm(x, y):
+    # LCM = (x * y) / GCD(x, y)
+    return (x * y) // calculate_gcd(x, y)
+
+
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+
+
+lcm_result = calculate_lcm(number1, number2)
+print(f"The LCM of {number1} and {number2} is: {lcm_result}")

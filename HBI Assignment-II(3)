@@ -1,0 +1,3 @@
+lst = ["Rahul", "John", "", "Karan", None, "Vishal", ""]
+filtered_lst = [item for item in lst if item and item.strip()]
+print(filtered_lst)

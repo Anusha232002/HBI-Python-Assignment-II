@@ -1,0 +1,5 @@
+input_str = 'I am 25 years and 15 months old'
+result_str = ''.join(char for char in input_str if char.isdigit())
+
+print("Original string:", input_str)
+print("String with only integers:", result_str)

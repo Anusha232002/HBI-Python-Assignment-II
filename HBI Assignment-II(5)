@@ -1,0 +1,12 @@
+import re
+
+def find_alphanumeric_words(input_str):
+    words = input_str.split()
+    alphanumeric_words = [word for word in words if re.search(r'[a-zA-Z]+.*\d+|\d+.*[a-zA-Z]+', word)]
+    return alphanumeric_words
+
+input_str = 'Rahul54 is Data Engineer13 and AI Expert'
+result = find_alphanumeric_words(input_str)
+
+print("Original string:", input_str)
+print("Words with both alphabets and numbers:", result)
